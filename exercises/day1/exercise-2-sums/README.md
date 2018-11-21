@@ -12,3 +12,43 @@ for i := 1; i < len(os.Args); i++ {
     fmt.Println(os.Args[i])
 }
 ```
+
+## Result
+
+```termanal
+$ go run main.go
+
+Usage:
+$ go run main <MAX>
+$ go run main 31
+
+Only integer values allowed
+exit status 1
+```
+
+```termanal
+$ go run main.go x
+
+Incorrect input: "x", expected integer
+exit status 1
+```
+
+```termanal
+$ go run main.go -2
+0%
+```
+
+```termanal
+$ go run main.go 3
+3%
+```
+
+```termanal
+$ go run main.go 5
+8%
+```
+
+```termanal
+$ go run main.go 10
+33%
+```
